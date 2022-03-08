@@ -3,6 +3,7 @@
 !*.yaml
 !.gitignore
 !*.md
+!backup_to_gh.sh
 
 .storage
 .cloud
