@@ -1,0 +1,16 @@
+  #device_tracker.yaml#
+
+  #- platform: aprs
+  #  username: W6WWH
+  #  callsigns:
+  #    - 'W6WWH-2'
+  #    - 'W6WWH-5'
+
+  - platform: traccar
+    host: 192.168.2.73
+    username: !secret tracun
+    password: !secret tracpwd
+    event: ['ignition_on','ignition_off','device_moving','device_stopped']
+
+  
+  

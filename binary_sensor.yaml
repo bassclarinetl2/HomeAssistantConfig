@@ -1,0 +1,38 @@
+  #binary_sensor.yaml#
+
+  - platform: template
+    sensors:
+      is_holidays:
+        friendly_name: Is Winter Holidays
+        value_template: >-
+          {{ (now().month == 11 and now().day in [16, 24, 25, 26, 27, 28, 29, 30] ) or (now().month == 12) or (now().month == 1) }}
+  - platform: octoprint
+    monitored_conditions:
+      - Printing
+      - Printing Error
+  - platform: ping
+    host: 192.168.2.40
+    name: "Keytotime (Prox)"
+    count: 8
+  - platform: ping
+    host: 192.1.68.2.42
+    name: "luxlibrary (Unraid)"
+    count: 8
+  - platform: uptimerobot
+    api_key: !secret uptimerbt 
+  - platform: ping
+    host: 8.8.8.8
+    name: "Google DNS (ping)"
+    count: 8
+    scan_interval: 60
+  - platform: ping
+    host: 9.9.9.9
+    name: "Quad9 DNS (ping)"
+    count: 8
+    scan_interval: 60
+  - platform: ping
+    host: 1.1.1.1
+    name: "CloudFlare DNS (ping)"
+    count: 8
+    scan_interval: 60
+

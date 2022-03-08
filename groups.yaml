@@ -1,0 +1,37 @@
+#groups.yaml
+#petcam1:
+#    - camera.petcam1
+#    - switch.petcam1_rtsp_server
+#    - sensor.petcam1
+#    - device_tracker.petcam1
+#    - sensor.petcam1_light_sensor
+#    - switch.petcam1_ir_filter
+#    - switch.petcam1_ir_led
+#    - switch.petcam1_night_mode
+#    - switch.petcam1_night_mode_auto
+#    - switch.petcam1_blue_led
+#    - switch.petcam1_yellow_led
+#    - switch.petcam1_motion_detection
+#    - switch.petcam1_motion_tracking
+#    - camera.petcam1_motion_snapshot
+#    - binary_sensor.petcam1_motion_sensor
+#    - cover.petcam1_move_left_right
+#    - cover.petcam1_move_up_down
+#petcam2:
+#    - camera.petcam2
+#    - switch.petcam2_rtsp_server
+#    - sensor.petcam2
+#    - device_tracker.petcam2
+#    - sensor.petcam2_light_sensor
+#    - switch.petcam2_ir_filter
+#    - switch.petcam2_ir_led
+#    - switch.petcam2_night_mode
+#    - switch.petcam2_night_mode_auto
+#    - switch.petcam2_blue_led
+#    - switch.petcam2_yellow_led
+#    - switch.petcam2_motion_detection
+#    - switch.petcam2_motion_tracking
+#    - camera.petcam2_motion_snapshot
+#    - binary_sensor.petcam2_motion_sensor
+#    - cover.petcam2_move_left_right
+#    - cover.petcam2_move_up_down

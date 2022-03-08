@@ -1,0 +1,21 @@
+  switch.sprinkler_1:
+    friendly_name: Parking Strip Drip
+  switch.sprinkler_2:
+    friendly_name: Front A
+  switch.sprinkler_3:
+    friendly_name: Back Sprinklers
+  switch.sprinkler_4:
+    friendly_name: Front B
+  sensor.ender_3_v2_actual_bed_temp:
+    unit_of_measurement: °C
+  sensor.octoprint_bed_target:
+    unit_of_measurement: C
+  sensor.octoprint_bed_temperature:
+    unit_of_measurement: C
+  sensor.octoprint_tool_0_target:
+    unit_of_measurement: C
+  sensor.octoprint_tool_0_temperature:
+    unit_of_measurement: C
+  switch.relay:
+    friendly_name: Tardis Reset
+    icon: mdi:lock-reset

@@ -1,0 +1,12 @@
+## camera.yaml ##
+
+  - platform: mjpeg
+    name: Octoprint
+    still_image_url: http://192.168.2.152/webcam/?action=snapshot
+    mjpeg_url: http://192.168.2.152/webcam/?action=stream
+  - platform: ffmpeg
+    name: PetCam1
+    input: -rtsp_transport tcp -i rtsp://192.168.2.37:8554/unicast
+  - platform: ffmpeg
+    name: petcam2
+    input: -rtsp_transport tcp -i rtsp://192.168.2.38:8554/unicast

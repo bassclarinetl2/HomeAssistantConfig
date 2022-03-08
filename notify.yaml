@@ -1,0 +1,26 @@
+  - name: googlemail-will
+    platform: smtp
+    server: smtp.gmail.com
+    port: 587
+    timeout: 15
+    sender: notify@heidfam.com
+    encryption: starttls
+    username: notify@heidfam.com
+    password: !secret gmpwd
+    recipient:
+      - bassclarinetl2@gmail.com
+    sender_name: Home Assistant
+  - name: googlemail-dadmobile
+    platform: smtp
+    port: 587
+    timeout: 15
+    sender: notify@heidfam.com
+    encryption: starttls
+    username: notify@heidfam.com
+    password: !secret gmpwd
+    recipient:
+      - 4086915207@msg.fi.google.com
+    sender_name: Home Assistant
+  - name: HASS
+    platform: discord
+    token: !secret hassdiscord

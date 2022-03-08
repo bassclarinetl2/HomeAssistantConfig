@@ -1,0 +1,90 @@
+
+homeassistant:
+  customize: !include customize.yaml
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+mobile_app:
+cloud:
+system_health:
+discovery:
+person:
+
+http:
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - 10.200.100.0/24
+    - 192.168.2.0/23
+  ssl_certificate: /ssl/heidfam+wildcard+10_1_21.pem
+  ssl_key: /ssl/heidfam+wildcard+10_1_21.key
+  
+# Text to speech
+tts:
+  - platform: picotts
+    language: "en-US"
+    
+ffmpeg:
+
+amcrest: !include amcrest.yaml
+camera: !include camera.yaml
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+sensor: !include sensors.yaml
+cover: !include covers.yaml
+device_tracker: !include device_tracker.yaml
+shell_command: !include shell_command.yaml
+notify: !include notify.yaml
+binary_sensor: !include binary_sensor.yaml
+switch: !include switches.yaml
+image_processing: !include image_processing.yaml
+
+proxmoxve:
+  - host: 192.168.2.40
+    realm: pve
+    username: hass
+    password: Hass1234%
+    verify_ssl: False
+    nodes:
+      - node: keytotime
+        vms:
+          - 101
+          - 102
+          - 108
+          - 113
+        containers:
+          - 100
+          - 103
+          - 104
+          - 105
+          - 107
+          - 110
+          - 111
+          
+
+lutron_caseta_pro:
+  bridges:
+    - host: 192.168.2.103
+      mac: 50:8C:B1:D6:9E:1C
+
+
+#foldingathomecontrol:
+#  - address: 192.168.2.100
+#    port: 36330
+#    password: !secret fahpwd
+
+
+#octoprint:
+#  host: 192.168.2.152
+#  api_key: !secret octoapi
+#  bed: true
+#  name: "Ender 3 v2"
+#  number_of_tools: 2
+#  sensors:
+#    monitored_conditions:
+#      - "Current State"
+#      - "Temperatures"
+#      - "Job Percentage"
+#      - "Time Elapsed"
+#      - "Time Remaining"
+

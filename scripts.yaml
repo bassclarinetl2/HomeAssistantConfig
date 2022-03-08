@@ -1,0 +1,13 @@
+  nws_popup_on_wx_alert:
+    sequence:
+      - service: persistent_notification.dismiss
+        data:
+          notification_id: nwswxalert
+      - service_template: "{% if states.sensor.nws_alerts.state != '0' %}\n persistent_notification.create\n\
+          {% endif %}\n"
+        data_template:
+          notification_id: nwswxalert
+          message: '{{ message }}'
+          title: '{{ title }}'
+    mode: single
+    alias: NWS Weather Alert Popup

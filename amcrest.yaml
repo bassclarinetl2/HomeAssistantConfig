@@ -1,0 +1,41 @@
+#amcrest.yaml#
+
+  - host: 192.168.2.30
+    username: !secret amcam_un
+    password: !secret amcam_pwd
+    name: "Driveway"
+
+  - host: 192.168.2.31
+    username: !secret amcam_un
+    password: !secret amcam_pwd
+    name: "Front Walk"
+
+  - host: 192.168.2.32
+    username: !secret amcam_un
+    password: !secret amcam_pwd
+    name: "Front Porch"
+
+  - host: 192.168.2.33
+    username: !secret amcam_un
+    password: !secret amcam_pwd
+    name: "Heidfam Weather"
+
+  - host: 192.168.2.34
+    username: !secret amcam_un
+    password: !secret amcam_pwd
+    name: "East"
+  
+  - host: 192.168.2.35
+    username: !secret amcam_un
+    password: !secret amcam_pwd
+    name: "Back"
+
+  - host: 192.168.2.36
+    username: !secret amcam_un
+    password: !secret amcam_pwd
+    name: "West"
+  
+#- host: 192.168.2.38
+ # username: !secret amcam_un
+ # password: !secret amcam_pwd
+#  name: "Doorbell"
